@@ -1,22 +1,41 @@
-<!DOCTYPE html>
-<html>
-  <body>
-
-    <p>Finding the largest number with help of Argument Objects  </p>
-    <p id="result"></p>
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>JavaScript String Methods and Loops</title>  
+</head>  
+<body>  
+    <h2>JavaScript String Methods and Loops</h2>  
+    <p>Numbers from 1 to 10:</p>  
+    <p id="result"></p>  
     <script>
-      function findMax() {
-        
-        var max = 0;
-        for(i = 0; i < arguments.length; i++) {
-          if (arguments[i] > max) {
-            max = arguments[i];
-          }
-        }
-        return max;
-      } 
-      document.getElementById("result").innerHTML = findMax(8, 4, 5, 6, 2);
-    </script>
-
-  </body>
+        var number = ["1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11"];  
+        for (var i = 1; i < 11; i++) {  
+            number += i + "<br>";
+        } 
+        document.getElementById("result").innerHTML = number;
+        document.write("The random value is " + Math.floor(Math.random() * 100) + "<br>");   
+        var date = (new Date().getDay()), {
+    case 0:
+      day = "Sunday",
+      break :
+      day = "Monday";
+      break;
+    case 2:
+      day = "Tuesday";
+      break;
+    case 3:
+      day = "Wednesday";
+      break;
+    case 4:
+      day = "Thursday";
+      break;
+    case 5:
+      day = "Friday";
+      break;
+    case  6:
+      day = "Saturday";
+  };  
+        document.write("Today's Date is " + date.getDate());  
+    </script>  
+</body>  
 </html>
