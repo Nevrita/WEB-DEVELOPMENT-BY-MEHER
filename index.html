@@ -1,40 +1,21 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  
 <html>
-<head>
-<title>Class in JS</title>
-</head>
+<head>  
+    <title>Sort and Reverse Numbers</title>  
+</head>  
 <body>
-<h2>JavaScript Class Inheritance</h2>
-<p id="details"></p>
-<p id="greetings"></p>
+<h2>Javascript Array Sort</h2>
+<p>Click the button to sort the array in ascending order.</p>
+<button onclick="ascending()">Ascending Order</button>
+<button onclick="descending()">Descending Order</button>
+<p id="result"></p>
 <script>
-class Student {
-constructor(name) {
-this.studentName = name;
+var points = [40, 100, 1, 5, 25, 10];
+document.getElementById("result").innerHTML = points;
+function ascending() {
+    points.sort(function(a,b){return a-b});
+document.getElementById("result").innerHTML = points;
 }
-static hello() {
-return "Hello";
-}
-present() {
-return 'My name is ' + this.studentName;
-}
-}
-class Grade extends Student {
-constructor(name, grade) {
-  super(name);
-  this.studentGrade = grade;
-}
-show() {
-  return this.present() + ', from ' +
-  this.studentGrade;
-}
-}
-let myStudent = new Grade("Meher Nigar Hridy", "grade 8");
-document.getElementById("details").innerHTML =
-myStudent.show();
-// hello() is a static method cannot be accessed by object myStudent
-document.getElementById("greetings").innerHTML =
-Student.hello();
 </script>
 </body>
-</html>
+</html> 
