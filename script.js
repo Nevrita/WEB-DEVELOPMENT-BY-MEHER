@@ -1,28 +1,16 @@
-// Clears the calculator display
-function clearScreen() {
-    document.getElementById("result").value = "";
+/*
+class Person {
+  constructor(name, job) {
+    this.name = name;
+    this.job = job;
+  }
+
+  print() {
+    const { name, job } = this;
+    console.log(`${name}, ${job}`);
+  }
 }
 
-// Appends the clicked button's value to the display
-function setScreenValue(value) {
-    document.getElementById("result").value += value;
-}
-
-// Calculates and displays the result
-function calculateResult() {
-    const resultElement = document.getElementById("result");
-    const expression = resultElement.value.trim();
-
-    // Check for empty input
-    if (expression === '') {
-        resultElement.value = 'Enter an expression';
-        return;
-    }
-
-    // Evaluate expression and handle errors
-    try {
-        resultElement.value = eval(expression);
-    } catch (e) {
-        resultElement.value = 'Invalid expression';
-    }
-}
+const thatGuy = new Person('John Doe', 'Software Engineer');
+thatGuy.print();
+*/
