@@ -1,41 +1,103 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>navgation</title>
-    <style>
-      body{
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      .topnav{
-        overflow: hidden;
-        background-color: #333;
-      }
-      .topnav a{
-        float: left;
-        color: deeppink;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-      }
-      .topnav a:hover{
-        background-color: blueviolet;
-        color: deepskyblue;
-      }
-      .topnav a.active{
-        background-color: yellowgreen;
-        color: darkcyan;
-      }
-      
-    </style>
-  </head>
-  <body>
-    <div class="topnav">
-      <a class="active" href="index.html">home</a>
-      <a href="about.html">about</a>
-      <a href="contactme.html">contact me</a>   
-      <a href="gallery.html">Gallery</a>
-    </div>
-  </body>
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Navbar with Sections</title>  
+    <style>  
+        body {  
+            margin: 0;  
+            font-family: Arial, Helvetica, sans-serif;  
+        }  
+        .topnav {  
+            overflow: hidden;  
+            background-color: skyblue;  
+        }  
+        .topnav a {  
+            float: left;  
+            color: darkblue;  
+            text-align: center;  
+            padding: 14px 16px;  
+            text-decoration: none;  
+            font-size: 17px;  
+        }  
+        .topnav a:hover {  
+            background-color: black;  
+            color: white;  
+        }  
+        .topnav a.active {  
+            background-color: rgb(255, 217, 156);  
+            color: black;  
+        }  
+        .content {  
+            display: none;  
+            padding: 20px;  
+            background-color: #f9f9f9;  
+            margin: 20px;  
+        }  
+    </style>  
+    <script>  
+        function showSection(sectionId) {  
+            // Hide all sections  
+            var sections = document.getElementsByClassName('content');  
+            for (var i = 0; i < sections.length; i++) {  
+                sections[i].style.display = 'none';  
+            }  
+
+            // Remove active class from all navigation links  
+            var links = document.querySelectorAll('.topnav a');  
+            links.forEach(link => link.classList.remove('active'));  
+
+            // Show the selected section  
+            document.getElementById(sectionId).style.display = 'block';  
+
+            // Set the active class on the clicked link  
+            event.target.classList.add('active');  
+        }  
+    </script>  
+</head>  
+<body>  
+    <div class="topnav">  
+        <a class="active" href="javascript:void(0)" onclick="showSection('home')">Home</a>  
+        <a href="javascript:void(0)" onclick="showSection('about')">About Us</a>  
+        <a href="javascript:void(0)" onclick="showSection('gallery')">Gallery</a>  
+        <a href="javascript:void(0)" onclick="showSection('services')">Services</a>  
+        <a href="javascript:void(0)" onclick="showSection('offer')">Offer</a>  
+        <a href="javascript:void(0)" onclick="showSection('contact')">Contact Us</a>  
+    </div>  
+
+    <div id="home" class="content" style="display: block;">  
+        <h2>Welcome to Our Home Page!</h2>  
+        <p>Here at Innovatech Solutions, we strive to provide the best service to our customers.</p>  
+    </div>  
+
+    <div id="about" class="content">  
+        <h2>About Us</h2>  
+        <p>We are Innovatech Solutions, a forward-thinking international software company focused on inventing, developing, and selling software that enhances public accessibility and strengthens the economy.</p>  
+        <p><strong>Company Name Explanation:</strong> "Innovatech" combines "innovation" and "technology," reflecting our commitment to creating new software solutions. "Solutions" emphasizes our role in problem-solving and collaboration, showcasing our work with other companies to develop beneficial software.</p>  
+        <p><strong>CEO:</strong> Meher Nigar Hridy </p> <!-- Replace with your name -->  
+    </div>  
+
+    <div id="gallery" class="content">  
+        <h2>Gallery</h2>  
+        <p>Check out our work and some amazing projects we've completed. Explore our vibrant portfolio!</p>  
+    </div>  
+
+    <div id="services" class="content">  
+        <h2>Our Services</h2>  
+        <p>We offer a wide range of services tailored to meet your needs. Let us help you achieve your goals!</p>  
+    </div>  
+
+    <div id="offer" class="content">  
+        <h2>Special Offers</h2>  
+        <p>Don't miss out on our latest special offers! Connect with us to learn more about exciting discounts and deals.</p>  
+    </div>  
+
+    <div id="contact" class="content">  
+        <h2>Contact Us</h2>  
+        <p>If you have any questions, please feel free to reach out to us!</p>  
+        <p><strong>Phone:</strong> (123) 456-7890</p>  
+        <p><strong>Email:</strong> info@innovatechsolutions.com</p> <!-- Updated email address -->  
+        <p><strong>Address:</strong> 123 Main St, Anytown, USA</p>  
+    </div>  
+
+</body>  
 </html>
