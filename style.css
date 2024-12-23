@@ -1,5 +1,7 @@
-/* #a{
-  margin-top: 100px;
-  margin-left: 50px;
-  border: 10px blue ridge;
-} */
+.myslides{
+    height: 500px;
+    width: 100%;
+}
+img{
+    width: 200px;
+}

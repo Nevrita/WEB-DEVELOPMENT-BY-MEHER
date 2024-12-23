@@ -1,16 +1,19 @@
-/*
-class Person {
-  constructor(name, job) {
-    this.name = name;
-    this.job = job;
+var index = 0;
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("myslides");
+
+  for (i = 0; i < x.length; i++) {``
+    x[i].style.display = "none";
   }
 
-  print() {
-    const { name, job } = this;
-    console.log(`${name}, ${job}`);
+  index++;
+  if (index > x.length) {
+    index = 1;
   }
+
+  x[index - 1].style.display = "block";
+
+  setTimeout(carousel, 2000);
 }
-
-const thatGuy = new Person('John Doe', 'Software Engineer');
-thatGuy.print();
-*/
+carousel(); // Start the carousel when the page loads
