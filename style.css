@@ -1,7 +1,43 @@
-.myslides{
-    height: 500px;
-    width: 100%;
-}
-img{
-    width: 200px;
+body, html {  
+    height: 100%;  
+    margin: 0;  
+    font-size: 16px;  
+    font-family: "Lato", sans-serif;  
+    font-weight: 400;  
+    line-height: 1.8em;  
+    color: rgb(0, 0, 67);  
+    background-color: lavenderblush;  
+}  
+
+.topnav {  
+    overflow: hidden;  
+    background-color: rgb(135, 235, 202);  
+}  
+
+.topnav a {  
+    display: inline;  
+    color: skyblue;  
+    text-align: center;  
+    padding: 14px 16px;  
+    text-decoration: none;  
+}  
+
+.topnav a:hover {  
+    background-color: #00063f;  
+}  
+
+.pimg3, .pimg2, .pimg1 {  
+    position: relative;  
+    opacity: 0.7; /* Adjust as necessary */  
+    background-repeat: no-repeat;  
+}  
+
+.section {  
+    text-align: center;  
+    padding: 50px 80px;  
+}  
+
+.section-dark {  
+    background-color: #282e34;  
+    color: #ddd;  
 }
